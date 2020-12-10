@@ -1,0 +1,42 @@
+{
+    "work-exp": [
+        {
+            "firm": "Caju",
+            "role": "Product Design and Front end Developer",
+            "year": "2019/2020",
+            "site": "caju.com.br"
+        },
+
+        {
+            "firm": "Mutant",
+            "role": "UX Designer",
+            "year": "2018/2019",
+            "site": "mutant.com.br"
+        },
+
+        {
+            "firm": "Voxel Digital",
+            "role": "UI/UX Designer",
+            "year": "2017/2018",
+            "site": "voxeldigital.com.br"
+        },
+        {
+            "firm": "Jornal Acrítica",
+            "role": "Graphic Designer",
+            "year": "2016/2017",
+            "site": "acritica.com.br"
+        },
+        {
+            "firm": "Unicorn Studio Design",
+            "role": "Designer & Co-founder",
+            "year": "2016/2017",
+            "site": "unicorn.studio"
+        },
+        {
+            "firm": "Apple Developer Academy",
+            "role": "Design Intern",
+            "year": "2015/2016",
+            "site": "bepid.com.br/manaus/"
+        }
+    ]
+}
