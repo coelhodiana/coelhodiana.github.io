@@ -7,4 +7,16 @@
     #title {
       font-size: 2rem;
     }
+
+    .mob {
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mob-hidden {
+      opacity: 0;
+    }
   }
