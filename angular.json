@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "protfolio-diana": {
+    "portfolio-diana": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser-esbuild",
           "options": {
-            "outputPath": "dist/protfolio-diana",
+            "outputPath": "dist/portfolio-diana",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "protfolio-diana:build:production"
+              "browserTarget": "portfolio-diana:build:production"
             },
             "development": {
-              "browserTarget": "protfolio-diana:build:development"
+              "browserTarget": "portfolio-diana:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "protfolio-diana:build"
+            "browserTarget": "portfolio-diana:build"
           }
         },
         "test": {
@@ -99,11 +99,11 @@
         "cypress-run": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "protfolio-diana:serve"
+            "devServerTarget": "portfolio-diana:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "protfolio-diana:serve:production"
+              "devServerTarget": "portfolio-diana:serve:production"
             }
           }
         },
@@ -117,13 +117,13 @@
         "e2e": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "protfolio-diana:serve",
+            "devServerTarget": "portfolio-diana:serve",
             "watch": true,
             "headless": false
           },
           "configurations": {
             "production": {
-              "devServerTarget": "protfolio-diana:serve:production"
+              "devServerTarget": "portfolio-diana:serve:production"
             }
           }
         },
@@ -144,6 +144,7 @@
       "@angular-eslint/schematics",
       "@cypress/schematic",
       "@schematics/angular"
-    ]
+    ],
+    "analytics": false
   }
 }
