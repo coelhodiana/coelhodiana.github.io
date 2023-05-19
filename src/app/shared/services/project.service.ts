@@ -1,14 +1,26 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Project } from '../interfaces/project';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProjectService {
+  selectedProject = signal<Project>({} as Project)
+
   constructor(private http: HttpClient) {}
 
-  getProjects(): Observable<any> {
-    return this.http.get<any>('api/projects');
+  selectProject(project: Project) {
+    this.selectedProject.set(project)
+    console.log('service: '+project.name)
+  }
+
+  getProjects(): Observable<Project[]> {
+    return this.http.get<Project[]>('api/projects');
+  }
+
+  getProject(): Observable<Project> {
+    return this.http.get<Project>('api/project');
   }
 }
