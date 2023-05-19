@@ -135,11 +135,26 @@
 }
 
 .projects {
+  padding: 2rem 0;
+  max-width: 1280px;
+  margin-bottom: 2rem;
 
   &__cards {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     overflow-x: scroll;
-    cursor: grab;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
+}
+
+.contact {
+  background-color: lightgray;
+  height: 40vh;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

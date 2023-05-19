@@ -1,10 +1,8 @@
 import {
-  Server,
-  Model,
   Factory,
-  belongsTo,
-  hasMany,
+  Model,
   RestSerializer,
+  Server
 } from 'miragejs';
 
 export function makeServer({ environment = 'development' } = {}) {
@@ -37,7 +35,7 @@ export function makeServer({ environment = 'development' } = {}) {
           description:
             'Aplicação web para registro de transações financeiras de entradas, gastos e investimentos.',
           url: 'https://www.ostentar.com.br/',
-          img: './assets/imersao.png'
+          img: './assets/ostenta.png'
         },
         {
           id: '1',
@@ -53,7 +51,7 @@ export function makeServer({ environment = 'development' } = {}) {
           description:
             'O Urban Cookie é um projeto que acontece na plataforma Instagram e se ocupa em compartilhar pequenas crônicas acompanhadas de ilustrações sobre diferentes personagens e contextos Urbanos.',
           url: 'https://urbancookie.github.io/',
-          img: './assets/imersao.png'
+          img: './assets/urbcookie.png'
         },
         {
           id: '3',
@@ -61,7 +59,7 @@ export function makeServer({ environment = 'development' } = {}) {
           description:
             'E-commerce desenvolvido no Bootcamp Generation Brazil, tem como objetivo fortalecer o consumo local e a produção agrícola responsável e sustentável.',
           url: 'https://oivendaverde.herokuapp.com/',
-          img: './assets/imersao.png'
+          img: './assets/vv.png'
         },
         {
           id: '4',
@@ -69,7 +67,7 @@ export function makeServer({ environment = 'development' } = {}) {
           description:
             'amobrindes é um projeto open source que nasceu do React Bootcamp, realizado pela WoMakersCode.',
           url: 'https://amobrindes-womakerscode.netlify.app/',
-          img: './assets/imersao.png'
+          img: './assets/ostenta.png'
         },
         {
           id: '5',
@@ -80,7 +78,6 @@ export function makeServer({ environment = 'development' } = {}) {
           img: './assets/imersao.png'
         },
       ]);
-
     },
   });
 
