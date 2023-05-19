@@ -1,0 +1,14 @@
+.card {
+  background-color: lightcyan;
+  overflow: hidden;
+  height: 300px;
+  width: 300px;
+  border-radius: .2rem;
+  cursor: pointer;
+
+  &__img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+  }
+}
