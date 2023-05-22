@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Router, RouterModule } from '@angular/router';
-import { ProjectCardComponent } from './../../components/project-card/project-card.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { HorizontalScrollDirective } from './../../shared/directives/horizontal-scroll.directive';
 import { Project } from './../../shared/interfaces/project';
 import { ProjectService } from './../../shared/services/project.service';

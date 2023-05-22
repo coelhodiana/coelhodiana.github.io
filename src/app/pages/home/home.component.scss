@@ -139,7 +139,6 @@
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
-  width: 100vw;
 
   &__cards {
     display: flex;
@@ -154,10 +153,16 @@
 }
 
 .contact {
-  background-color: lightgray;
-  height: 40vh;
-  padding: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 1280px;
+  gap: 2rem;
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+  }
 }

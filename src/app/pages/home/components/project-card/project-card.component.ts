@@ -1,4 +1,4 @@
-import { Project } from './../../shared/interfaces/project';
+import { Project } from '../../../../shared/interfaces/project';
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
