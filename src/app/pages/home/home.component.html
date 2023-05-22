@@ -20,7 +20,7 @@
   </main>
 
   <section class="projects">
-    <div class="projects__cards">
+    <div class="projects__cards" appHorizontalScroll>
       <app-project-card
         *ngFor="let project of projects()"
         [project]="project"
@@ -32,20 +32,6 @@
 
   <section class="contact">
     <h2>Vamos criar algo juntos?</h2>
-
-    <div class="contact__buttons">
-      <ul>
-        <li>
-          <a href="">oi@dianacoelho.com.br</a>
-        </li>
-        <li>
-          <a
-            href="https://api.whatsapp.com/send/?phone=5592981893594&text&type=phone_number&app_absent=0"
-            target="_blank"
-            >whatsapp</a
-          >
-        </li>
-      </ul>
-    </div>
+    <p>coelhodiana@icloud.com</p>
   </section>
 </div>

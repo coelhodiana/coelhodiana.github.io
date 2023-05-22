@@ -1,7 +1,7 @@
-import { ProjectService } from './../../shared/services/project.service';
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { ProjectService } from './../../shared/services/project.service';
 
 @Component({
   selector: 'app-project-page',
@@ -14,9 +14,16 @@ import { HttpClientModule } from '@angular/common/http';
 export class ProjectPageComponent implements OnInit {
   project = this.projectService.selectedProject;
 
-  constructor(private projectService: ProjectService) {}
+  constructor(
+    private projectService: ProjectService,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
     console.log(this.project());
+  }
+
+  goBack() {
+    this.location.back();
   }
 }
