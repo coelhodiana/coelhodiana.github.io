@@ -1,0 +1,58 @@
+<div class="container mx-auto md:flex gap-2">
+  <header class="p-4 md:w-96">
+    <article>
+      <p class="text-4xl">Olá, eu sou</p>
+      <p>
+        <span class="text-4xl font-bold">Diana Coelho,</span>
+      </p>
+      <p class="text-4xl">desenvolvedora Front-end e apaixonada por tecnologia.</p>
+      <p class="text-md py-4">
+        Aqui você vai encontrar alguns dos meus projetos.
+      </p>
+    </article>
+
+    <div class="pt-6">
+      <p class="text-md">Entre em contato pelo E-mail:</p>
+      <span class="text-md font-bold">oi@dianacoelho.com.br</span>
+    </div>
+  </header>
+
+  <main class="p-4 md:flex-1">
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+      <div *ngFor="let project of projects">
+        <div class="rounded overflow-hidden flex group relative cursor-pointer" (click)="goToSite(project.url)">
+          <img
+            class="w-full aspect-[3/4] object-cover object-center group-hover:scale-110 ease-in-out duration-1000"
+            [src]="project.img"
+            [alt]="project.name"
+          />
+          <div
+            class="w-full flex justify-between p-4 bg-black text-white text-lg font-bold bottom-0 left-0 group-hover:absolute transition ease-in-out duration-1000"
+          >
+            <p>
+              {{ project.name }}
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-external-link"
+            >
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" x2="21" y1="14" y2="3"></line>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
