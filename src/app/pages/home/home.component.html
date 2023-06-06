@@ -1,37 +1,58 @@
-<div>
-  <main class="hero">
-    <div class="hero__content">
-      <h1>Vamos criar um <span>site</span>?</h1>
-      <div class="hero__description">
-        <div class="hero__description--balloon">
-          <p>
-            Oi! Meu nome é Diana! Sou Designer e Desenvolvedora de sistemas e eu
-            amo usar tecnologia para construir coisas maneiras para a internet!
-          </p>
+<div class="container mx-auto md:flex gap-2">
+  <header class="p-4 md:w-96">
+    <article>
+      <p class="text-4xl">Olá, eu sou</p>
+      <p>
+        <span class="text-4xl font-bold">Diana Coelho,</span>
+      </p>
+      <p class="text-4xl">desenvolvedora Front-end e apaixonada por tecnologia.</p>
+      <p class="text-md py-4">
+        Aqui você vai encontrar alguns dos meus projetos.
+      </p>
+    </article>
+
+    <div class="pt-6">
+      <p class="text-md">Entre em contato pelo E-mail:</p>
+      <span class="text-md font-bold">oi@dianacoelho.com.br</span>
+    </div>
+  </header>
+
+  <main class="p-4 md:flex-1">
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+      <div *ngFor="let project of projects">
+        <div class="rounded overflow-hidden flex group relative cursor-pointer" (click)="goToSite(project.url)">
+          <img
+            class="w-full aspect-[3/4] object-cover object-center group-hover:scale-110 ease-in-out duration-1000"
+            [src]="project.img"
+            [alt]="project.name"
+          />
+          <div
+            class="w-full flex justify-between p-4 bg-black text-white text-lg font-bold bottom-0 left-0 group-hover:absolute transition ease-in-out duration-1000"
+          >
+            <p>
+              {{ project.name }}
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-external-link"
+            >
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" x2="21" y1="14" y2="3"></line>
+            </svg>
+          </div>
         </div>
-        <figure class="hero__description--image">
-          <img src="assets/diana.png" alt="Uma self da Diana Coelho" />
-        </figure>
       </div>
     </div>
-    <div class="hero__scroll-indicator">
-      <img src="assets/icons/arrow-down.svg" alt="" />
-    </div>
   </main>
-
-  <section class="projects">
-    <div class="projects__cards" appHorizontalScroll>
-      <app-project-card
-        *ngFor="let project of projects()"
-        [project]="project"
-        class="projects__card"
-        (click)="goToProject(project)"
-      ></app-project-card>
-    </div>
-  </section>
-
-  <section class="contact">
-    <h2>Vamos criar algo juntos?</h2>
-    <p>coelhodiana@icloud.com</p>
-  </section>
 </div>

@@ -1,36 +1,61 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import {
-  Component
-} from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { Router, RouterModule } from '@angular/router';
-import { ProjectCardComponent } from './components/project-card/project-card.component';
-import { HorizontalScrollDirective } from './../../shared/directives/horizontal-scroll.directive';
-import { Project } from './../../shared/interfaces/project';
-import { ProjectService } from './../../shared/services/project.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    CommonModule,
-    HttpClientModule,
-    ProjectCardComponent,
-    RouterModule,
-    HorizontalScrollDirective
-  ],
-  providers: [ProjectService],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  projects = toSignal(this.project.getProjects());
+  public projects = [
+    {
+      id: 0,
+      name: 'Imersão Direito Eleitoral',
+      url: 'https://imersaodireitoeleitoral.com.br/',
+      img: 'https://raw.githubusercontent.com/coelhodiana/assets-projetos/master/portfolio/imersaodireitoeleitoral.png',
+    },
+    {
+      id: 1,
+      name: 'Ostenta',
+      url: 'https://www.ostentar.com.br/',
+      img: 'https://raw.githubusercontent.com/coelhodiana/assets-projetos/master/portfolio/ostenta.png',
+    },
+    {
+      id: 2,
+      name: 'Urban Cookie',
+      url: 'https://urbancookie.github.io/',
+      img: 'https://raw.githubusercontent.com/coelhodiana/assets-projetos/master/portfolio/urbancookie.png',
+    },
+    {
+      id: 3,
+      name: 'Bola Mágica',
+      url: 'https://dianacoelho.com.br/bolamagica/',
+      img: 'https://raw.githubusercontent.com/coelhodiana/assets-projetos/master/portfolio/bolamagica.png',
+    },
+    {
+      id: 4,
+      name: 'Contador de Série',
+      url: 'https://dianacoelho.com.br/relaxe-academia/',
+      img: 'https://raw.githubusercontent.com/coelhodiana/assets-projetos/master/portfolio/academia.png',
+    },
+    {
+      id: 5,
+      name: 'O Pão do Pai',
+      url: 'https://opaodopai.com.br/',
+      img: 'https://raw.githubusercontent.com/coelhodiana/assets-projetos/master/portfolio/opaodopai.png',
+    }
+  ];
 
-  constructor(private project: ProjectService, private router: Router) {}
 
-  public goToProject(project: Project) {
-    this.router.navigate([project.id]);
-    this.project.selectProject(project);
+
+
+  public goToSite(url: string): void {
+    window.open(url, '_blank');
   }
+
 }
+
+
+
